@@ -18,10 +18,14 @@ function findLanguage() {
 function translateText(content, lang) {
   switch (lang) {
     case "de":
-      return translationDe[content];
+      if (typeof translationDe != undefined) {
+        return translationDe[content];
+      }
 
     case "pl":
-      return translationPl[content];
+      if (typeof translationPl != undefined) {
+        return translationPl[content];
+      }
 
     case "en":
       return content;
