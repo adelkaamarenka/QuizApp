@@ -1,9 +1,9 @@
 import translationDe from "../translations/de.js";
 import translationPl from "../translations/pl.js";
 
-const toTranslate = document.querySelectorAll(".translate");
+const toTranslate = document.querySelectorAll("[data-translate]");
 
-const hyperlinks = document.querySelectorAll(".hyperlink");
+const hyperlinks = document.querySelectorAll("[data-hyperlink]");
 
 const lang = findLanguage();
 
@@ -51,6 +51,6 @@ function appendLanguage(href, lang) {
       return href += "?lang=pl";
 
     default:
-      return href += "?lang=en";
+      return href
   }
 }
