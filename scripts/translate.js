@@ -1,20 +1,6 @@
 import translationDe from "../translations/de.js";
 import translationPl from "../translations/pl.js";
 
-const toTranslate = document.querySelectorAll("[data-translate]");
-
-const hyperlinks = document.querySelectorAll("[data-hyperlink]");
-
-const lang = findLanguage();
-
-toTranslate.forEach((element) => {
-  element.textContent = translateText(element.textContent, lang);
-});
-
-hyperlinks.forEach((element) => {
-  element.href = appendLanguage(element.href, lang);
-});
-
 function findLanguage() {
   let params = new URL(document.URL).searchParams;
   let lang = params.get("lang");
@@ -54,3 +40,21 @@ function appendLanguage(href, lang) {
       return href
   }
 }
+
+function init() {
+  const toTranslate = document.querySelectorAll("[data-translate]");
+
+  const hyperlinks = document.querySelectorAll("[data-hyperlink]");
+
+  const lang = findLanguage();
+
+  toTranslate.forEach((element) => {
+    element.textContent = translateText(element.textContent, lang);
+  });
+
+  hyperlinks.forEach((element) => {
+    element.href = appendLanguage(element.href, lang);
+  });
+}
+
+init()
