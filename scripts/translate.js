@@ -1,5 +1,5 @@
-import translationDe from "./translations/de.js";
-import translationPl from "./translations/pl.js";
+import translationDe from "../translations/de.js";
+import translationPl from "../translations/pl.js";
 
 const toTranslate = document.querySelectorAll(".translate");
 
@@ -18,16 +18,20 @@ function findLanguage() {
 function translateText(content, lang) {
   switch (lang) {
     case "de":
-      if (typeof translationDe != undefined) {
+      if (translationDe[content] != null) {
         return translationDe[content];
+      } else {
+        return content;
       }
 
     case "pl":
-      if (typeof translationPl != undefined) {
+      if (translationPl[content] != null) {
         return translationPl[content];
+      } else {
+        return content;
       }
 
-    case "en":
+    default:
       return content;
   }
 }
