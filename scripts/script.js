@@ -21,3 +21,5 @@ const quizContent = [
     d: "answer",
   },
 ];
+
+console.log(quizContent.length);
