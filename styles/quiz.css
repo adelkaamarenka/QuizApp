@@ -1,27 +1,5 @@
 @import "./common.css";
 
-* {
-  box-sizing: border-box;
-}
-
-body {
-  font-size: var(--normal-font-size);
-  font-family: var(--font);
-  font-weight: var(--boldness);
-  margin: 0;
-  background: var(--bg-color);
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  color: var(--text-color);
-}
-
-h2 {
-  font-size: inherit;
-  font-weight: inherit;
-}
-
 .logo {
   color: var(--text-color);
   margin-top: 1.5rem;
