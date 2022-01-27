@@ -92,7 +92,7 @@
     <meta name="theme-color" content="#ffffff" />
     <!-- scripts -->
     <script src="./scripts/translate.js" type="module"></script>
-    <script src="./scripts/script.js" type="module"></script>
+    <script src="./scripts/load-quiz.js" type="module"></script>
   </head>
   <body>
     <h2 class="logo">Quizzy</h2>
@@ -103,12 +103,14 @@
         <div class="answer">
           <input type="radio" id="a" name="answer" /><label
             for="a"
+            class="a"
             data-translate
           ></label>
         </div>
         <div class="answer">
           <input type="radio" id="b" name="answer" /><label
             for="b"
+            class="b"
             data-translate
           ></label>
         </div>
@@ -116,12 +118,14 @@
           <input type="radio" id="c" name="answer" /><label
             for="c"
             data-translate
+            class="c"
           ></label>
         </div>
         <div class="answer">
           <input type="radio" id="d" name="answer" /><label
             for="d"
             data-translate
+            class="d"
           ></label>
         </div>
       </div>
