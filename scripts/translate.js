@@ -1,6 +1,9 @@
 import translationDe from "../translations/de.js";
 import translationPl from "../translations/pl.js";
 
+document.addEventListener("DOMContentLoaded", init);
+let langExport = findLanguage();
+
 function findLanguage() {
   let params = new URL(document.URL).searchParams;
   let lang = params.get("lang");
@@ -54,7 +57,11 @@ function init() {
 
   hyperlinks.forEach((element) => {
     element.href = appendLanguage(element.href, lang);
+
+
   });
 }
 
-init()
+export default langExport;
+export { translateText };
+
