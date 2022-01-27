@@ -56,8 +56,16 @@ function changeQuestion() {
   currQuestion++;
   if (currQuestion < quizContent.length) {
     loadQuestion();
+    //un-check the radio
+
+    //save the answer somewhere
   }
   else {
+    //save the answer
+
+    //calculate the results
+
+    //export the results to result.html
     document.location = "../result.html"
   }
 
