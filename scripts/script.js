@@ -22,4 +22,5 @@ const quizContent = [
   },
 ];
 
+
 console.log(quizContent.length);
