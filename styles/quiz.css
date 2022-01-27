@@ -12,6 +12,7 @@
   width: 80vw;
   height: 65vh;
   padding: 2rem 3.5rem 3rem 3.5rem;
+  position: relative;
 }
 
 .counter {
@@ -33,4 +34,22 @@
   font-size: var(--smaller-font);
   border: 1px solid rgb(219, 219, 219);
   flex: 1;
+}
+
+.next {
+  border: none;
+  background: white;
+  color: var(--text-color);
+  position: absolute;
+  top: 80%;
+  right: 5%;
+}
+
+.next:hover {
+  cursor: pointer;
+}
+
+.next:active {
+  transform: translate(4px, 0);
+  transition: all 0.1s;
 }

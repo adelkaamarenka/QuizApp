@@ -7,6 +7,12 @@
     <title>Quizzy</title>
     <!-- Main style  -->
     <link rel="stylesheet" href="./styles/quiz.css" />
+    <!--Font awesome-->
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.12.1/css/all.css"
+      crossorigin="anonymous"
+    />
     <!--icon-->
     <link
       rel="apple-touch-icon"
@@ -85,44 +91,41 @@
     />
     <meta name="theme-color" content="#ffffff" />
     <!-- scripts -->
-    <script src="./scripts/translate.js" defer type="module"></script>
-    <script src="./scripts/script.js" defer type="module"></script>
+    <script src="./scripts/translate.js" type="module"></script>
+    <script src="./scripts/script.js" type="module"></script>
   </head>
   <body>
     <h2 class="logo">Quizzy</h2>
     <div class="quiz-container">
       <h2 class="counter">(1/5)</h2>
-      <h2 class="question" data-translate>Question</h2>
+      <h2 class="question" data-translate></h2>
       <div class="answerbox">
         <div class="answer">
           <input type="radio" id="a" name="answer" /><label
             for="a"
             data-translate
-            >Answer</label
-          >
+          ></label>
         </div>
         <div class="answer">
           <input type="radio" id="b" name="answer" /><label
             for="b"
             data-translate
-            >Answer</label
-          >
+          ></label>
         </div>
         <div class="answer">
           <input type="radio" id="c" name="answer" /><label
             for="c"
             data-translate
-            >Answer</label
-          >
+          ></label>
         </div>
         <div class="answer">
           <input type="radio" id="d" name="answer" /><label
             for="d"
             data-translate
-            >Answer</label
-          >
+          ></label>
         </div>
       </div>
+      <button class="next"><i class="fas fa-arrow-right fa-5x"></i></button>
     </div>
   </body>
 </html>
