@@ -54,7 +54,13 @@ function init() {
 
 function changeQuestion() {
   currQuestion++;
-  loadQuestion();
+  if (currQuestion < quizContent.length) {
+    loadQuestion();
+  }
+  else {
+    document.location = "../result.html"
+  }
+
 }
 
 function loadQuestion() {
