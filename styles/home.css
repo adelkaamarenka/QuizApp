@@ -1,7 +1,7 @@
 @import "./common.css";
 
 .lang {
-  margin-top: 3rem;
+  margin-top: var(--margin-top-mobile);
   margin-bottom: 0;
 }
 
@@ -28,7 +28,6 @@
 
   .lang-box {
     margin-top: 2.5rem;
-    display: flex;
     flex-direction: row;
   }
 
@@ -36,8 +35,5 @@
     width: 160px;
     height: 160px;
     margin: 0 3rem;
-    border-radius: 50%;
-    overflow: hidden;
-    align-items: center;
   }
 }
