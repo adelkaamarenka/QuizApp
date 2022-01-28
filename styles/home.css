@@ -1,20 +1,43 @@
 @import "./common.css";
 
 .lang {
-  margin-top: 10rem;
+  margin-top: 3rem;
+  margin-bottom: 0;
 }
 
 .lang-box {
-  margin-top: 2.5rem;
+  margin-top: 2rem;
   display: flex;
-  flex-direction: row;
+  flex-direction: column;
 }
 
 .lang-item {
-  width: 160px;
-  height: 160px;
-  margin: 0 3rem;
+  width: 15vh;
+  height: 15vh;
+  margin-top: 2rem;
+  margin-bottom: 2rem;
   border-radius: 50%;
   overflow: hidden;
   align-items: center;
+}
+
+@media only screen and (min-width: 600px) {
+  .lang {
+    margin-top: 10rem;
+  }
+
+  .lang-box {
+    margin-top: 2.5rem;
+    display: flex;
+    flex-direction: row;
+  }
+
+  .lang-item {
+    width: 160px;
+    height: 160px;
+    margin: 0 3rem;
+    border-radius: 50%;
+    overflow: hidden;
+    align-items: center;
+  }
 }
