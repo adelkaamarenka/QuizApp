@@ -30,11 +30,14 @@ function init() {
 
   loadQuestion();
 
-  let buttons = document.querySelectorAll(".next");
-  buttons.forEach(element => element.addEventListener("click", changeQuestion));
+  let nextButtons = document.querySelectorAll(".next");
+  nextButtons.forEach(element => element.addEventListener("click", nextQuestion));
+
+  let backButtons = document.querySelectorAll(".back");
+  backButtons.forEach(element => element.addEventListener("click", previousQuestion));
 }
 
-function changeQuestion() {
+function nextQuestion() {
   currQuestion++;
   if (currQuestion < quizContent.length) {
     loadQuestion();
@@ -49,6 +52,17 @@ function changeQuestion() {
 
     //export the results to result.html
     document.location = "../result.html"
+  }
+
+}
+
+function previousQuestion() {
+  if (currQuestion > 0) {
+    currQuestion--;
+    loadQuestion();
+    //un-check the radio
+
+    //delete the current answer
   }
 
 }
