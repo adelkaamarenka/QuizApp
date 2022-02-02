@@ -46,11 +46,11 @@ body {
   text-align: center;
 }
 
-.next {
+.next-desktop {
   display: none;
 }
 
-.back {
+.back-desktop {
   display: none;
 }
 
@@ -116,7 +116,7 @@ body {
     display: none;
   }
 
-  .next {
+  .next-desktop {
     display: block;
     border: none;
     background: white;
@@ -126,16 +126,16 @@ body {
     right: 5%;
   }
 
-  .next:hover {
+  .next-desktop:hover {
     cursor: pointer;
   }
 
-  .next:active {
+  .next-desktop:active {
     transform: translate(4px, 0);
     transition: all 0.1s;
   }
 
-  .back {
+  .back-desktop {
     display: block;
     border: none;
     background: white;
@@ -145,11 +145,11 @@ body {
     left: 5%;
   }
 
-  .back:hover {
+  .back-desktop:hover {
     cursor: pointer;
   }
 
-  .back:active {
+  .back-desktop:active {
     transform: translate(4px, 0);
     transition: all 0.1s;
   }
