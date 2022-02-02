@@ -1,12 +1,14 @@
 @import url("https://fonts.googleapis.com/css2?family=family=Montserrat:wght@200;400&&display=swap");
 
 :root {
-  --normal-font-size: 3em;
+  --normal-font-size: 3rem;
   --smaller-font: 60%;
+  --smaller-font-mobile: 40%;
   --font: "Montserrat", sans-serif;
   --boldness: normal;
   --bg-color: #f3f3fb;
   --text-color: rgb(48, 48, 48);
+  --margin-top-mobile: 3rem;
 }
 
 * {

@@ -58,5 +58,3 @@ function loadQuestion() {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
 }
-
-
