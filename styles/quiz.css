@@ -1,55 +1,156 @@
 @import "./common.css";
 
+body {
+  overflow: hidden;
+}
+
 .logo {
   color: var(--text-color);
   margin-top: 1.5rem;
-  margin-bottom: 3.5rem;
+  margin-bottom: 2rem;
 }
 
 .quiz-container {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background: white;
-  width: 80vw;
-  height: 65vh;
-  padding: 2rem 3.5rem 3rem 3.5rem;
+  width: 85vw;
+  height: 75vh;
+  padding: 0.5rem 2rem 1rem 1rem;
   position: relative;
+  margin: auto;
 }
 
 .counter {
-  font-size: var(--smaller-font);
-  margin-bottom: 2rem;
+  display: none;
 }
 
 .question {
-  margin-bottom: 3rem;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  font-size: var(--smaller-font);
+  height: 15%;
+  text-align: center;
 }
 
 .answerbox {
   display: flex;
-  height: 55%;
+  flex-direction: column;
+  height: 70%;
   gap: 2rem;
 }
 
 .answer {
-  font-size: var(--smaller-font);
+  font-size: var(--smaller-font-mobile);
   border: 1px solid rgb(219, 219, 219);
   flex: 1;
+  text-align: center;
 }
 
 .next {
+  display: none;
+}
+
+.back {
+  display: none;
+}
+
+.next-mobile {
   border: none;
   background: white;
   color: var(--text-color);
   position: absolute;
-  top: 80%;
+  top: 90%;
   right: 5%;
 }
 
-.next:hover {
-  cursor: pointer;
+.back-mobile {
+  border: none;
+  background: white;
+  color: var(--text-color);
+  position: absolute;
+  top: 90%;
+  left: 5%;
 }
 
-.next:active {
-  transform: translate(4px, 0);
-  transition: all 0.1s;
+@media only screen and (min-width: 700px) {
+  .logo {
+    color: var(--text-color);
+    margin-bottom: 3.5rem;
+  }
+
+  .quiz-container {
+    width: 80vw;
+    height: 75vh;
+    padding: 1.5rem 3.5rem 2rem 3.5rem;
+  }
+
+  .counter {
+    font-size: var(--smaller-font);
+    margin-bottom: 2rem;
+    display: block;
+  }
+
+  .question {
+    margin-top: 0;
+    margin-bottom: 2rem;
+    font-size: var(--normal-font-size);
+    text-align: left;
+  }
+
+  .answerbox {
+    flex-direction: row;
+    height: 45%;
+  }
+
+  .answer {
+    font-size: var(--smaller-font);
+    border: 1px solid rgb(219, 219, 219);
+    flex: 1;
+  }
+
+  .next-mobile {
+    display: none;
+  }
+
+  .back-mobile {
+    display: none;
+  }
+
+  .next {
+    display: block;
+    border: none;
+    background: white;
+    color: var(--text-color);
+    position: absolute;
+    top: 85%;
+    right: 5%;
+  }
+
+  .next:hover {
+    cursor: pointer;
+  }
+
+  .next:active {
+    transform: translate(4px, 0);
+    transition: all 0.1s;
+  }
+
+  .back {
+    display: block;
+    border: none;
+    background: white;
+    color: var(--text-color);
+    position: absolute;
+    top: 85%;
+    left: 5%;
+  }
+
+  .back:hover {
+    cursor: pointer;
+  }
+
+  .back:active {
+    transform: translate(4px, 0);
+    transition: all 0.1s;
+  }
 }
