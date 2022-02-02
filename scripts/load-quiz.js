@@ -5,27 +5,43 @@ import quizContent from "./quiz-contents.js";
 
 const lang = langExport;
 
-const gameElements = ["question", "a", "b", "c", "d"];
+const gameElements = ["a", "b", "c", "d"];
 
 let gameState = {
-  question: "",
   a: "",
   b: "",
   c: "",
   d: "",
 }
 
+let answers = {
+  a: "",
+  b: "",
+  c: "",
+  d: "",
+}
+
+let answersCounter = {
+  a: 0,
+  b: 0,
+  c: 0,
+  d: 0,
+}
+
 let currQuestion;
+let question;
 
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
+
+  question = document.querySelector(".question");
+
   gameElements.forEach(element => {
     gameState[element] = document.querySelector(`.${element}`);
-    console.log(element);
+    answers[element] = document.querySelector(`#${element}`);
   })
 
-  console.log(gameState);
   currQuestion = 0;
 
   loadQuestion();
@@ -38,6 +54,8 @@ function init() {
 }
 
 function nextQuestion() {
+  gameElements.forEach(element => findAnswer(element));
+
   currQuestion++;
   if (currQuestion < quizContent.length) {
     loadQuestion();
@@ -56,6 +74,13 @@ function nextQuestion() {
 
 }
 
+function findAnswer(element) {
+  if (answers[element].checked) {
+    answersCounter[element]++;
+    console.log(answersCounter[element]);
+  }
+}
+
 function previousQuestion() {
   if (currQuestion > 0) {
     currQuestion--;
@@ -68,6 +93,7 @@ function previousQuestion() {
 }
 
 function loadQuestion() {
+  question.textContent = translateText(quizContent[currQuestion].question, lang);
   gameElements.forEach(element => {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
