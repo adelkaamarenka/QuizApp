@@ -30,8 +30,8 @@ function init() {
 
   loadQuestion();
 
-  let button = document.querySelector(".next");
-  button.addEventListener("click", changeQuestion);
+  let buttons = document.querySelectorAll(".next");
+  buttons.forEach(element => element.addEventListener("click", changeQuestion));
 }
 
 function changeQuestion() {
