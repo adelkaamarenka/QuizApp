@@ -14,13 +14,6 @@ let gameState = {
   d: "",
 }
 
-let answers = {
-  a: "",
-  b: "",
-  c: "",
-  d: "",
-}
-
 let answersCounter = {
   a: 0,
   b: 0,
@@ -39,7 +32,7 @@ function init() {
 
   gameElements.forEach(element => {
     gameState[element] = document.querySelector(`.${element}`);
-    answers[element] = document.querySelector(`#${element}`);
+    gameState[element].addEventListener("click", event => gameState[element].classList.add("active"));
   })
 
   currQuestion = 0;
@@ -54,7 +47,7 @@ function init() {
 }
 
 function nextQuestion() {
-  gameElements.forEach(element => findAnswer(element));
+  /*   gameElements.forEach(element => findAnswer(element)); */
 
   currQuestion++;
   if (currQuestion < quizContent.length) {
@@ -74,11 +67,8 @@ function nextQuestion() {
 
 }
 
-function findAnswer(element) {
-  if (answers[element].checked) {
-    answersCounter[element]++;
-    console.log(answersCounter[element]);
-  }
+function dupa() {
+  console.log();
 }
 
 function previousQuestion() {
