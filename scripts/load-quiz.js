@@ -61,6 +61,7 @@ function init() {
   backButtons.forEach(element => element.addEventListener("click", previousQuestion));
 }
 
+
 function nextQuestion() {
   //log the answer
   gameElements.forEach(element => {
@@ -81,8 +82,8 @@ function nextQuestion() {
 
     document.location = "../result.html"
   }
-
 }
+
 
 function saveAnswer(element) {
   answersCounter[element]++;
@@ -95,6 +96,7 @@ function calculateResult() {
 
   finalAnswer = findHighest(answers);
 }
+
 
 function findHighest(answers) {
   let highest = 0;
@@ -120,8 +122,8 @@ function previousQuestion() {
 
     //TO DO: delete the current answer
   }
-
 }
+
 
 function loadQuestion() {
   question.textContent = translateText(quizContent[currQuestion].question, lang);
@@ -129,4 +131,3 @@ function loadQuestion() {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
 }
-
