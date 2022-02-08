@@ -21,6 +21,13 @@ let answersCounter = {
   d: 0,
 }
 
+let answers = {
+  a: "",
+  b: "",
+  c: "",
+  d: "",
+}
+
 let currQuestion;
 let question;
 
@@ -32,6 +39,7 @@ function init() {
 
   gameElements.forEach(element => {
     gameState[element] = document.querySelector(`.${element}`);
+    answers[element] = document.querySelector(`#${element}`);
     gameState[element].addEventListener("click", event => gameState[element].classList.add("active"));
   })
 
@@ -47,7 +55,9 @@ function init() {
 }
 
 function nextQuestion() {
-  /*   gameElements.forEach(element => findAnswer(element)); */
+  gameElements.forEach(element => {
+    answers[element].checked ? saveAnswer(element) : "";
+  });
 
   currQuestion++;
   if (currQuestion < quizContent.length) {
@@ -67,8 +77,9 @@ function nextQuestion() {
 
 }
 
-function dupa() {
-  console.log();
+function saveAnswer(element) {
+  answersCounter[element]++;
+  console.log(answersCounter);
 }
 
 function previousQuestion() {
