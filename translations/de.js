@@ -9,6 +9,11 @@ const translations = {
   "Question 5": "Frage 5",
   "What kind of pizza are you?": "Welche Pizza bist du?",
   "Choose a quiz": "Wähle einen Quiz",
+  "Result 1": "Ergebnis 1",
+  "Result 2": "Ergebnis 2",
+  "Result 3": "Ergebnis 3",
+  "Result 4": "Ergebnis 4",
+  "description": "Beschreibung",
 };
 
 export default translations;
