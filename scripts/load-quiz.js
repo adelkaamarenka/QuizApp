@@ -21,6 +21,7 @@ let answersCounter = {
   d: 0,
 }
 
+//needed to be able to go back to the previous questions
 let answersStates = []
 
 let answers = {
@@ -66,22 +67,17 @@ function nextQuestion() {
 
   currQuestion++;
 
-  //load the next question
+  //in not the last question - load the next question and uncheck radio
   if (currQuestion < quizContent.length) {
     loadQuestion();
     gameElements.forEach(element => { answers[element].checked = false });
-
-    //save the answer somewhere
   }
 
-  //load the results
+  //if last question - load the results
   else {
-    //save the answer
+    calculateResult();
 
-    //calculate the results
-
-    //export the results to result.html
-    document.location = "../result.html"
+    //document.location = "../result.html"
   }
 
 }
@@ -89,8 +85,31 @@ function nextQuestion() {
 function saveAnswer(element) {
   answersCounter[element]++;
   answersStates.push(answersCounter);
-  console.log(answersCounter);
-  console.log(answersStates);
+}
+
+function calculateResult() {
+  //find the most chosen answer
+  let answers = answersStates[answersStates.length - 1];
+
+  console.log(findHighest(answers));
+
+  //assign the result to the answers (ex. a -> margherita)
+  //export the result to results.html
+}
+
+function findHighest(answers) {
+  let highest = 0;
+  for (let answer in answers) {
+    if (answers[answer] > highest) {
+      highest = answers[answer];
+    }
+  }
+
+  for (let answer in answers) {
+    if (answers[answer] == highest) {
+      return answer;
+    }
+  }
 }
 
 
