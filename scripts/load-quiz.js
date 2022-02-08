@@ -83,7 +83,6 @@ function nextQuestion() {
   }
 }
 
-
 function saveAnswer(element) {
   answersCounter[element]++;
   answersStates.push(answersCounter);
@@ -94,6 +93,7 @@ function calculateResult() {
   let answers = answersStates[answersStates.length - 1];
 
   finalAnswer = findHighest(answers);
+  localStorage.setItem('answerExport', finalAnswer);
 }
 
 
@@ -112,6 +112,9 @@ function findHighest(answers) {
   }
 }
 
+export function getFinalAnswer() {
+  return localStorage.getItem('answerExport');
+}
 
 function previousQuestion() {
   if (currQuestion > 0) {
