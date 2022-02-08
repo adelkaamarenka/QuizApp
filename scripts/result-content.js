@@ -1,4 +1,4 @@
-const resultContent = {
+export const resultContent = {
     a: {
         title: "Result 1",
         img: "",
