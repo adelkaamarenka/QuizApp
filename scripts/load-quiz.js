@@ -34,6 +34,8 @@ let answers = {
 let currQuestion;
 let question;
 
+export const finalAnswer = "";
+
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
@@ -91,7 +93,7 @@ function calculateResult() {
   //find the most chosen answer
   let answers = answersStates[answersStates.length - 1];
 
-  console.log(findHighest(answers));
+  finalAnswer = findHighest(answers);
 
   //assign the result to the answers (ex. a -> margherita)
   //export the result to results.html
@@ -130,3 +132,4 @@ function loadQuestion() {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
 }
+
