@@ -1,3 +1,3 @@
-import { finalAnswerExport } from "./load-quiz.js";
+import { finalAnswer } from "./load-quiz.js";
 
-console.log(finalAnswerExport.finalAnswer);
+console.log(finalAnswer);
