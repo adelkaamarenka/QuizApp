@@ -13,7 +13,7 @@ const quizContent = [
         c: "answer",
         d: "answer",
     },
-    {
+    /* {
         question: "Question 3",
         a: "answer",
         b: "answer",
@@ -33,7 +33,7 @@ const quizContent = [
         b: "answer",
         c: "answer",
         d: "answer",
-    },
+    }, */
 ];
 
 export default quizContent;

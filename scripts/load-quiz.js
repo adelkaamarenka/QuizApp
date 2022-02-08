@@ -34,7 +34,7 @@ let answers = {
 let currQuestion;
 let question;
 
-export const finalAnswer = "";
+export let finalAnswer = "aaa";
 
 document.addEventListener("DOMContentLoaded", init);
 
@@ -79,8 +79,7 @@ function nextQuestion() {
   //if last question - load the results
   else {
     calculateResult();
-
-    document.location = "../result.html"
+    window.location.replace("../result.html");
   }
 }
 
@@ -131,3 +130,4 @@ function loadQuestion() {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
 }
+
