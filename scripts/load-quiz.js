@@ -37,16 +37,18 @@ function init() {
 
   question = document.querySelector(".question");
 
+  //assign the answer js variables to the html elements
   gameElements.forEach(element => {
     gameState[element] = document.querySelector(`.${element}`);
     answers[element] = document.querySelector(`#${element}`);
-    gameState[element].addEventListener("click", event => gameState[element].classList.add("active"));
   })
 
   currQuestion = 0;
 
+  //load the first question
   loadQuestion();
 
+  //assign functionality to buttons
   let nextButtons = document.querySelectorAll(".next");
   nextButtons.forEach(element => element.addEventListener("click", nextQuestion));
 
@@ -55,17 +57,22 @@ function init() {
 }
 
 function nextQuestion() {
+  //log the answer
   gameElements.forEach(element => {
     answers[element].checked ? saveAnswer(element) : "";
   });
 
   currQuestion++;
+
+  //load the next question
   if (currQuestion < quizContent.length) {
     loadQuestion();
     //un-check the radio
 
     //save the answer somewhere
   }
+
+  //load the results
   else {
     //save the answer
 
