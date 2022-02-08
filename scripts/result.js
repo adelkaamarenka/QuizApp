@@ -20,7 +20,6 @@ document.addEventListener("DOMContentLoaded", init);
 function init() {
     elementsArr.forEach(element => {
         resultElements[element] = document.querySelector(`.${element}`);
-        console.log(resultElements[element]);
     })
 
     loadContent();
