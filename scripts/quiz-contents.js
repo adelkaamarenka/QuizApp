@@ -20,6 +20,20 @@ const quizContent = [
         c: "answer",
         d: "answer",
     },
+    {
+        question: "Question 4",
+        a: "answer",
+        b: "answer",
+        c: "answer",
+        d: "answer",
+    },
+    {
+        question: "Question 5",
+        a: "answer",
+        b: "answer",
+        c: "answer",
+        d: "answer",
+    },
 ];
 
 export default quizContent;
