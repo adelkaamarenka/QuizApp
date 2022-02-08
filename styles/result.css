@@ -1,1 +1,48 @@
 @import "./common.css";
+
+.logo {
+  color: var(--text-color);
+  margin-top: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.result-container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: white;
+  width: 85vw;
+  height: 75vh;
+  padding: 0.5rem 2rem 1rem 1rem;
+  position: relative;
+  margin: auto;
+  display: flex;
+}
+
+.right {
+  background: red;
+  width: 40%;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  background: blue;
+  margin: 0;
+  height: 20%;
+}
+
+.img {
+  height: 80%;
+}
+
+.left {
+  width: 60%;
+  overflow: hidden;
+  padding: 2rem 1rem;
+  margin: 0;
+}
+
+.description {
+  margin: 0;
+  font-size: var(--smaller-font);
+}
