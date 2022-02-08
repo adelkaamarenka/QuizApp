@@ -21,6 +21,8 @@ let answersCounter = {
   d: 0,
 }
 
+let answersStates = []
+
 let answers = {
   a: "",
   b: "",
@@ -48,17 +50,12 @@ function init() {
   //load the first question
   loadQuestion();
 
-<<<<<<< HEAD
-  let buttons = document.querySelectorAll(".next");
-  buttons.forEach(element => element.addEventListener("click", changeQuestion));
-=======
   //assign functionality to buttons
   let nextButtons = document.querySelectorAll(".next");
   nextButtons.forEach(element => element.addEventListener("click", nextQuestion));
 
   let backButtons = document.querySelectorAll(".back");
   backButtons.forEach(element => element.addEventListener("click", previousQuestion));
->>>>>>> main
 }
 
 function nextQuestion() {
@@ -91,8 +88,11 @@ function nextQuestion() {
 
 function saveAnswer(element) {
   answersCounter[element]++;
+  answersStates.push(answersCounter);
   console.log(answersCounter);
+  console.log(answersStates);
 }
+
 
 function previousQuestion() {
   if (currQuestion > 0) {
