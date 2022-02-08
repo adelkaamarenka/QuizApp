@@ -67,7 +67,7 @@ function nextQuestion() {
   //load the next question
   if (currQuestion < quizContent.length) {
     loadQuestion();
-    //un-check the radio
+    gameElements.forEach(element => { answers[element].checked = false });
 
     //save the answer somewhere
   }
@@ -93,7 +93,7 @@ function previousQuestion() {
   if (currQuestion > 0) {
     currQuestion--;
     loadQuestion();
-    //un-check the radio
+    gameElements.forEach(element => { answers[element].checked = false });
 
     //delete the current answer
   }
