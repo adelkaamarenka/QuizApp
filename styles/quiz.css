@@ -44,6 +44,27 @@ body {
   border: 1px solid rgb(219, 219, 219);
   flex: 1;
   text-align: center;
+  border-radius: 15%;
+}
+
+.answer input[type="radio"] {
+  display: none;
+}
+
+.answer label {
+  display: inline-block;
+}
+
+.answer input[type="radio"]:checked + label {
+  border: 3px solid var(--text-color);
+  border-radius: 15%;
+}
+
+label {
+  display: block;
+  padding: 0;
+  height: 100%;
+  width: 100%;
 }
 
 .next-desktop {

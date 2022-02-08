@@ -5,6 +5,8 @@ const translations = {
   "Question 1": "Pytanie 1",
   "Question 2": "Pytanie 2",
   "Question 3": "Pytanie 3",
+  "Question 4": "Pytanie 4",
+  "Question 5": "Pytanie 5",
   "What kind of pizza are you?": "Jakim rodzajem pizzy jesteś?",
   "Choose a quiz": "Wybierz quiz",
 };

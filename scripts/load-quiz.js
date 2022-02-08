@@ -5,10 +5,23 @@ import quizContent from "./quiz-contents.js";
 
 const lang = langExport;
 
-const gameElements = ["question", "a", "b", "c", "d"];
+const gameElements = ["a", "b", "c", "d"];
 
 let gameState = {
-  question: "",
+  a: "",
+  b: "",
+  c: "",
+  d: "",
+}
+
+let answersCounter = {
+  a: 0,
+  b: 0,
+  c: 0,
+  d: 0,
+}
+
+let answers = {
   a: "",
   b: "",
   c: "",
@@ -16,32 +29,55 @@ let gameState = {
 }
 
 let currQuestion;
+let question;
 
 document.addEventListener("DOMContentLoaded", init);
 
 function init() {
+
+  question = document.querySelector(".question");
+
+  //assign the answer js variables to the html elements
   gameElements.forEach(element => {
     gameState[element] = document.querySelector(`.${element}`);
-    console.log(element);
+    answers[element] = document.querySelector(`#${element}`);
   })
 
-  console.log(gameState);
   currQuestion = 0;
 
+  //load the first question
   loadQuestion();
 
+<<<<<<< HEAD
   let buttons = document.querySelectorAll(".next");
   buttons.forEach(element => element.addEventListener("click", changeQuestion));
+=======
+  //assign functionality to buttons
+  let nextButtons = document.querySelectorAll(".next");
+  nextButtons.forEach(element => element.addEventListener("click", nextQuestion));
+
+  let backButtons = document.querySelectorAll(".back");
+  backButtons.forEach(element => element.addEventListener("click", previousQuestion));
+>>>>>>> main
 }
 
-function changeQuestion() {
+function nextQuestion() {
+  //log the answer
+  gameElements.forEach(element => {
+    answers[element].checked ? saveAnswer(element) : "";
+  });
+
   currQuestion++;
+
+  //load the next question
   if (currQuestion < quizContent.length) {
     loadQuestion();
-    //un-check the radio
+    gameElements.forEach(element => { answers[element].checked = false });
 
     //save the answer somewhere
   }
+
+  //load the results
   else {
     //save the answer
 
@@ -53,7 +89,24 @@ function changeQuestion() {
 
 }
 
+function saveAnswer(element) {
+  answersCounter[element]++;
+  console.log(answersCounter);
+}
+
+function previousQuestion() {
+  if (currQuestion > 0) {
+    currQuestion--;
+    loadQuestion();
+    gameElements.forEach(element => { answers[element].checked = false });
+
+    //delete the current answer
+  }
+
+}
+
 function loadQuestion() {
+  question.textContent = translateText(quizContent[currQuestion].question, lang);
   gameElements.forEach(element => {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
   })
