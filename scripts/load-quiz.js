@@ -79,7 +79,7 @@ function nextQuestion() {
   else {
     calculateResult();
 
-    //document.location = "../result.html"
+    document.location = "../result.html"
   }
 
 }
@@ -94,9 +94,6 @@ function calculateResult() {
   let answers = answersStates[answersStates.length - 1];
 
   finalAnswer = findHighest(answers);
-
-  //assign the result to the answers (ex. a -> margherita)
-  //export the result to results.html
 }
 
 function findHighest(answers) {
@@ -121,7 +118,7 @@ function previousQuestion() {
     loadQuestion();
     gameElements.forEach(element => { answers[element].checked = false });
 
-    //delete the current answer
+    //TO DO: delete the current answer
   }
 
 }
