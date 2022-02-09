@@ -79,7 +79,7 @@ function nextQuestion() {
   //if last question - load the results
   else {
     calculateResult();
-    window.location.replace("../result.html");
+    lang == "en" ? window.location.replace("../result.html") : window.location.replace(`../result.html?lang=${lang}`);
   }
 }
 
