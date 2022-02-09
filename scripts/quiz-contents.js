@@ -2,7 +2,7 @@ const quizContent = [
     {
         //a -> Pinapple  b-> Pepperoni  c -> Margherita   d-> Olives
         question: "What does your perfect holiday look like?",
-        a: "Spontaneous trip to an unknown destination",
+        a: "A spontaneous trip to an unknown destination",
         b: "All-inclusive holiday in Spain with my friends",
         c: "Relaxing somewhere by a nearby lake with a close friend or partner",
         d: "Visiting an European capital",
@@ -26,14 +26,14 @@ const quizContent = [
         a: "Dance till I’m dead!",
         b: "Engage in conversations in the kitchen",
         c: "Hang out alone on the couch or cling to the friend I came with",
-        d: "Look good and flirt with people",
+        d: "Look good and flirt with other good-looking people",
     },
     {
         question: "What do you enjoy doing in your free time?",
         a: "Doing some sports outdoors",
         b: "Going out with friends",
-        c: "Reading my favorite book",
-        d: "Doing some sports outdoors",
+        c: "Reading my favorite book or doing my hobby",
+        d: "Going shopping for new clothes",
     },
 ];
 

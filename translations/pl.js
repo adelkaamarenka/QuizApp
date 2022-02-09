@@ -1,5 +1,5 @@
 const translations = {
-  "What does your perfect holiday look like": "Jak wygląda Twój wymarzony wakacyjny wyjazd?",
+  "What does your perfect holiday look like?": "Jak wygląda Twój wymarzony wakacyjny wyjazd?",
   "A spontaneous trip to an unknown destination": "Spontaniczny wyjazd w nieznane miejsce",
   "All-inclusive holiday in Spain with my friends": "Wakacje all inclusive w Hiszpanii z grupą przyjaciół",
   "Relaxing somewhere by a nearby lake with a close friend or partner": "Wypoczynek gdzieś przy pobliskim jeziorem z drugą połówką lub przyjacielem",
@@ -11,7 +11,7 @@ const translations = {
   "Minimalistic and expensive designer clothes": "Minimalistycznych, drogich ubrań od designerów",
   "How would you like to spend your birthday?": "Jak najchętniej spędziłbyś urodziny?",
   "A surprise party organized by my friends": "Niech przyjaciele zaskoczą mnie imprezą-niespodzianką",
-  "A huge party to which all the people I know would be invited": "",
+  "A huge party to which all the people I know would be invited": "Wielka domówka, na której będą wszyscy moi znajomi",
   "A film marathon alone or with a close friend": "Wielka domówka, na której będą wszyscy moi znajomi",
   "Dinner in a fancy restaurant with my partner": "Sam lub z bliskim przyjacielem przy maratonie filmowym",
   "At a party I usually:": "Na imprezie zazwyczaj:",
