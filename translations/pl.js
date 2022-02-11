@@ -33,6 +33,7 @@ const translations = {
   "You're an intellectual that appreciates the finer things that life has to offer. You have sophisticated taste when it comes to fashion, friends, and food.": "Jesteś intelektualistą, dla którego ważne są lepsze rzeczy w życiu. W kwestii ubioru, doboru przyjaciół oraz jedenia masz bardzo wyszukany gust.",
   "What kind of pizza are you?": "Jakim rodzajem pizzy jesteś?",
   "Choose a quiz": "Wybierz quiz",
+  "Choose an answer!": "Wybierz odpowiedź!",
 };
 
 export default translations;
