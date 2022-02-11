@@ -18,7 +18,7 @@ const translations = {
   "At a party I usually:": "Wenn ich auf einer Party bin:",
   "Dance till I’m dead!": "Tanze ich bis zum Umfallen!",
   "Engage in conversations in the kitchen": "Diskutiere ich mit coolen Leute in der Küche",
-  "Hang out alone on the couch or cling to the friend I came with": "Sitze allein auf dem Couch oder halte mich an dem Freund mit dem ich gekommen bin fest",
+  "Hang out alone on the couch or cling to the friend I came with": "Sitze allein auf dem Couch oder folge den Freund mit dem ich angekommen bin",
   "Look good and flirt with other good-looking people": "Sehe ich gut aus und flirte mit anderen Leuten die gut aussehen.",
   "What do you enjoy doing in your free time?": "Was machst du am liebsten in deiner Freizeit?",
   "Doing some sports outdoors": "Draußen Sport treiben",
