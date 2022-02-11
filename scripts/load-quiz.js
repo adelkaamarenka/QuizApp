@@ -95,7 +95,7 @@ function nextQuestion() {
     //if last question - load the results
     else {
       calculateResult();
-      lang == "null" ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
+      lang == null ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
     }
   }
 
