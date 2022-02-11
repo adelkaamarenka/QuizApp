@@ -27,6 +27,8 @@ function init() {
 
 function loadContent() {
     elementsArr.forEach(element => {
-        resultElements[element].textContent = translateText(resultContent[answer][element], lang);
+        element != "img" ?
+            (lang != null ? resultElements[element].textContent = translateText(resultContent[answer][element], lang) : resultElements[element].textContent = resultContent[answer][element]) : resultElements[element].src = resultContent[answer].img;
+
     })
 }
