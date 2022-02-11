@@ -12,7 +12,7 @@ const quizContent = [
         a: "Crazy patterns and silhouettes",
         b: "A little bit of everything",
         c: "Simple t-shirts, hoodies and jeans",
-        d: "Minimalistic and expensive designer clothes",
+        d: "Elegant and expensive designer clothes",
     },
     {
         question: "How would you like to spend your birthday?",
