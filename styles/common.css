@@ -2,6 +2,7 @@
 
 :root {
   --normal-font-size: 3rem;
+  --middle-font: 80%;
   --smaller-font: 60%;
   --smaller-font-mobile: 40%;
   --font: "Montserrat", sans-serif;
