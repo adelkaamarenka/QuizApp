@@ -12,7 +12,7 @@ const translations = {
   "Elegant and expensive designer clothes": "Eleganten und teuren Designer-Kleidung",
   "How would you like to spend your birthday?": "Wie möchtest du dein Geburtstag verbringen?",
   "A surprise party organized by my friends": "Lass meinen Freunden mich mit einer Surprise-Party überraschen",
-  "A huge party to which all the people I know would be invited": "Eine Riesenparty, dazu alle Leute die ich kenne eingeladen würden",
+  "A huge party to which all the people I know would be invited": "Eine Riesenparty, zu der alle Leute die ich kenne eingeladen würden",
   "A film marathon alone or with a close friend": "Ein Film-Marathon alleine oder mit einem guten Freund",
   "Dinner in a fancy restaurant with my partner": "Abendessen in einem schicken Restaurant zu zweit",
   "At a party I usually:": "Wenn ich auf einer Party bin:",
