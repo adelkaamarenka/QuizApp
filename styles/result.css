@@ -18,31 +18,33 @@
 }
 
 .right {
-  background: red;
   width: 40%;
+  padding: 3rem;
   text-align: center;
   display: flex;
   flex-direction: column;
 }
 
 .title {
-  background: blue;
   margin: 0;
   height: 20%;
 }
 
 .img {
   height: 80%;
+  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
+  pointer-events: none;
 }
 
 .left {
   width: 60%;
   overflow: hidden;
   padding: 2rem 1rem;
-  margin: 0;
+  margin: auto;
+  padding: 4rem;
 }
 
 .description {
   margin: 0;
-  font-size: var(--smaller-font);
+  font-size: var(--normal-font-si);
 }
