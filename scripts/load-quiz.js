@@ -34,6 +34,7 @@ let answers = {
 let currQuestion;
 let question;
 let promptField;
+let counter;
 
 export let finalAnswer = "aaa";
 
@@ -52,6 +53,8 @@ function init() {
   promptField = document.querySelector(".prompt");
   promptField.textContent = translateText("Choose an answer!", lang);
 
+  counter = document.querySelector(".counter");
+
   currQuestion = 0;
 
   //load the first question
@@ -67,8 +70,6 @@ function init() {
 
 
 function nextQuestion() {
-
-  promptField.style.display = 'none';
 
   let count = 0;
 
@@ -145,7 +146,11 @@ function previousQuestion() {
 
 
 function loadQuestion() {
+
+  counter.textContent = `${currQuestion + 1}/${quizContent.length}`;
+
   promptField.style.display = 'none';
+
   question.textContent = translateText(quizContent[currQuestion].question, lang);
   gameElements.forEach(element => {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
