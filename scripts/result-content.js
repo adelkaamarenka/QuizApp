@@ -1,7 +1,7 @@
 export const resultContent = {
     a: {
         title: "Pineapple pizza",
-        img: "./images/Pizzas/hawaii3.jpg",
+        img: "./images/Pizzas/hawaii2.jpg",
         description: "Your decisions often leave others confused, but you don’t care. You’re extravagant. You often struggle with conflicting emotions, have lots of energy and crazy ideas, that’s why people either love of hate you.",
     },
     b: {
@@ -11,7 +11,7 @@ export const resultContent = {
     },
     c: {
         title: "Margherita",
-        img: "./images/Pizzas/margherita.jpg",
+        img: "./images/Pizzas/margerita2.png",
         description: "You like simplicity and minimalism. You prefer quality over quality, so at home you only have one plant you take good care of, the same favourite bag you’ve had for years and the one best friend you’ve known since kindergarten. You enjoy your own company and have no problem traveling or eating at a restaurant alone.",
     },
     d: {
