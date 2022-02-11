@@ -36,7 +36,7 @@ let question;
 let promptField;
 let counter;
 
-export let finalAnswer = "aaa";
+let finalAnswer;
 
 document.addEventListener("DOMContentLoaded", init);
 
