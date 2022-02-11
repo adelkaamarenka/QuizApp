@@ -73,7 +73,6 @@ function init() {
 
 
 function nextQuestion() {
-
   let count = 0;
 
   //log the answer
@@ -83,8 +82,6 @@ function nextQuestion() {
 
   const temp = Object.assign({}, answersCounter);
   answersStates.push(temp);
-
-
 
   if (count < 4) {
     currQuestion++;
@@ -105,8 +102,6 @@ function nextQuestion() {
   else {
     promptField.style.display = 'inline';
   }
-
-
 }
 
 function deleteAnswer() {
@@ -154,9 +149,6 @@ function previousQuestion() {
 
 
 function loadQuestion() {
-
-
-
   counter.textContent = `${currQuestion + 1}/${quizContent.length}`;
 
   promptField.style.display = 'none';
