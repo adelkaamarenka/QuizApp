@@ -57,6 +57,9 @@ function init() {
 
   currQuestion = 0;
 
+  let n = Object.assign({}, answersCounter);
+  answersStates.push(n);
+
   //load the first question
   loadQuestion();
 
@@ -75,8 +78,13 @@ function nextQuestion() {
 
   //log the answer
   gameElements.forEach(element => {
-    answers[element].checked ? saveAnswer(element) : count++;
+    answers[element].checked ? answersCounter[element]++ : count++;
   });
+
+  const temp = Object.assign({}, answersCounter);
+  answersStates.push(temp);
+
+
 
   if (count < 4) {
     currQuestion++;
@@ -101,9 +109,9 @@ function nextQuestion() {
 
 }
 
-function saveAnswer(element) {
-  answersCounter[element]++;
-  answersStates.push(answersCounter);
+function deleteAnswer() {
+  answersStates.pop();
+  answersCounter = answersStates[answersStates.length - 1];
 }
 
 function calculateResult() {
@@ -140,12 +148,14 @@ function previousQuestion() {
     loadQuestion();
     gameElements.forEach(element => { answers[element].checked = false });
 
-    //TO DO: delete the current answer
+    deleteAnswer();
   }
 }
 
 
 function loadQuestion() {
+
+
 
   counter.textContent = `${currQuestion + 1}/${quizContent.length}`;
 
