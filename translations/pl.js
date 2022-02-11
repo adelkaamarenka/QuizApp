@@ -2,7 +2,7 @@ const translations = {
   "What does your perfect holiday look like?": "Jak wygląda Twój wymarzony wakacyjny wyjazd?",
   "A spontaneous trip to an unknown destination": "Spontaniczny wyjazd w nieznane miejsce",
   "All-inclusive holiday in Spain with my friends": "Wakacje all inclusive w Hiszpanii z grupą przyjaciół",
-  "Relaxing somewhere by a nearby lake with a close friend or partner": "Wypoczynek gdzieś przy pobliskim jeziorem z drugą połówką lub przyjacielem",
+  "Relaxing by a nearby lake with a close person": "Wypoczynek przy pobliskim jeziorem z bliską osobą",
   "Visiting an European capital": "Zwiedzanie europejskiej stolicy",
   "What does your wardrobe mostly consist of?": "Czego jest najwięcej w Twojej garderobie?",
   "Crazy patterns and silhouettes": "Szalonych wzorów i krojów",

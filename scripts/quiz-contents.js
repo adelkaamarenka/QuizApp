@@ -4,7 +4,7 @@ const quizContent = [
         question: "What does your perfect holiday look like?",
         a: "A spontaneous trip to an unknown destination",
         b: "All-inclusive holiday in Spain with my friends",
-        c: "Relaxing somewhere by a nearby lake with a close friend or partner",
+        c: "Relaxing by a nearby lake with a close person",
         d: "Visiting an European capital",
     },
     {
