@@ -45,14 +45,11 @@ body {
   flex: 1;
   text-align: center;
   border-radius: 15%;
+  position: relative;
 }
 
 .answer input[type="radio"] {
   display: none;
-}
-
-.answer label {
-  display: inline-block;
 }
 
 .answer input[type="radio"]:checked + label {
@@ -62,7 +59,7 @@ body {
 
 label {
   display: block;
-  padding: 0;
+  padding: 1rem;
   height: 100%;
   width: 100%;
 }
