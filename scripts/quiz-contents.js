@@ -3,7 +3,7 @@ const quizContent = [
         //a -> Pinapple  b-> Pepperoni  c -> Margherita   d-> Olives
         question: "What does your perfect holiday look like?",
         a: "A spontaneous trip to an unknown destination",
-        b: "All-inclusive holiday in Spain with my friends",
+        b: "All-inclusive holiday with my friends",
         c: "Relaxing by a nearby lake with a close person",
         d: "Visiting an European capital",
     },
