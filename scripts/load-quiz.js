@@ -33,6 +33,7 @@ let answers = {
 
 let currQuestion;
 let question;
+let promptField;
 
 export let finalAnswer = "aaa";
 
@@ -47,6 +48,9 @@ function init() {
     gameState[element] = document.querySelector(`.${element}`);
     answers[element] = document.querySelector(`#${element}`);
   })
+
+  promptField = document.querySelector(".prompt");
+  promptField.textContent = translateText("Choose an answer!", lang);
 
   currQuestion = 0;
 
@@ -63,24 +67,37 @@ function init() {
 
 
 function nextQuestion() {
+
+  promptField.style.display = 'none';
+
+  let count = 0;
+
   //log the answer
   gameElements.forEach(element => {
-    answers[element].checked ? saveAnswer(element) : "";
+    answers[element].checked ? saveAnswer(element) : count++;
   });
 
-  currQuestion++;
+  if (count < 4) {
+    currQuestion++;
 
-  //in not the last question - load the next question and uncheck radio
-  if (currQuestion < quizContent.length) {
-    loadQuestion();
-    gameElements.forEach(element => { answers[element].checked = false });
+    //if not the last question - load the next question and uncheck radio
+    if (currQuestion < quizContent.length) {
+      loadQuestion();
+      gameElements.forEach(element => { answers[element].checked = false });
+    }
+
+    //if last question - load the results
+    else {
+      calculateResult();
+      lang == "null" ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
+    }
   }
 
-  //if last question - load the results
   else {
-    calculateResult();
-    lang == "en" ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
+    promptField.style.display = 'inline';
   }
+
+
 }
 
 function saveAnswer(element) {
@@ -128,6 +145,7 @@ function previousQuestion() {
 
 
 function loadQuestion() {
+  promptField.style.display = 'none';
   question.textContent = translateText(quizContent[currQuestion].question, lang);
   gameElements.forEach(element => {
     gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);

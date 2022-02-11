@@ -137,6 +137,22 @@ label {
     display: none;
   }
 
+  .prompt-box {
+    position: absolute;
+    top: 85%;
+    left: 50%;
+    transform: translate(-50%);
+    height: 13%;
+    width: 40%;
+    color: var(--red-color);
+    font-size: var(--normal-font-size);
+    text-align: center;
+  }
+
+  .prompt {
+    margin: 0;
+  }
+
   .next-desktop {
     display: block;
     border: none;
