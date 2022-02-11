@@ -51,7 +51,7 @@ function init() {
   })
 
   promptField = document.querySelector(".prompt");
-  promptField.textContent = translateText("Choose an answer!", lang);
+  lang != null ? promptField.textContent = translateText("Choose an answer!", lang) : promptField.textContent = "Choose an answer!";
 
   counter = document.querySelector(".counter");
 
@@ -153,9 +153,9 @@ function loadQuestion() {
 
   promptField.style.display = 'none';
 
-  question.textContent = translateText(quizContent[currQuestion].question, lang);
+  lang != null ? question.textContent = translateText(quizContent[currQuestion].question, lang) : question.textContent = quizContent[currQuestion].question;
   gameElements.forEach(element => {
-    gameState[element].textContent = translateText(quizContent[currQuestion][element], lang);
+    lang != null ? gameState[element].textContent = translateText(quizContent[currQuestion][element], lang) : gameState[element].textContent = quizContent[currQuestion][element];
   })
 }
 
