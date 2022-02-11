@@ -43,9 +43,9 @@ body {
   font-size: var(--smaller-font-mobile);
   border: 1px solid rgb(219, 219, 219);
   flex: 1;
+  min-width: 0;
   text-align: center;
   border-radius: 15%;
-  position: relative;
 }
 
 .answer input[type="radio"] {
@@ -55,6 +55,7 @@ body {
 .answer input[type="radio"]:checked + label {
   border: 3px solid var(--text-color);
   border-radius: 15%;
+  word-wrap: unset;
 }
 
 label {
@@ -123,7 +124,6 @@ label {
   .answer {
     font-size: var(--smaller-font);
     border: 1px solid rgb(219, 219, 219);
-    flex: 1;
   }
 
   .next-mobile {
