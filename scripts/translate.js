@@ -13,18 +13,16 @@ function findLanguage() {
 function translateText(content, lang) {
   switch (lang) {
     case "de":
-      if (translationDe[content] != null) {
+      if (translationDe[content]) {
         return translationDe[content];
-      } else {
-        return content;
       }
+      return content;
+
 
     case "pl":
-      if (translationPl[content] != null) {
+      if (translationPl[content]) {
         return translationPl[content];
-      } else {
-        return content;
-      }
+      } return content;
 
     default:
       return content;
