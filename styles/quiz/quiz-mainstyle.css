@@ -1,0 +1,114 @@
+@import "/styles/common.css";
+
+body {
+  overflow: hidden;
+}
+
+.logo {
+  color: var(--text-color);
+}
+
+.quiz-container {
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+  background: white;
+  position: relative;
+}
+
+.counter {
+  font-size: var(--smaller-font);
+  margin-bottom: 2rem;
+  display: block;
+}
+
+.question {
+  height: 15%;
+  text-align: center;
+}
+
+.answerbox {
+  display: flex;
+}
+
+.answer {
+  border: 1px solid rgb(219, 219, 219);
+  flex: 1;
+  min-width: 0;
+  text-align: center;
+}
+
+.answer input[type="radio"] {
+  display: none;
+}
+
+.answer input[type="radio"]:checked + label {
+  border: 3px solid var(--text-color);
+  word-wrap: unset;
+}
+
+label {
+  display: block;
+  padding: 1rem;
+  height: 100%;
+  width: 100%;
+}
+
+.arrow {
+  border: none;
+  background: white;
+  color: var(--text-color);
+}
+
+.next-desktop {
+  position: absolute;
+  top: 85%;
+  right: 5%;
+}
+
+.back-desktop {
+  position: absolute;
+  top: 85%;
+  left: 5%;
+}
+
+.next-mobile {
+  position: absolute;
+  top: 78%;
+  right: 5%;
+}
+
+.back-mobile {
+  position: absolute;
+  top: 78%;
+  left: 5%;
+}
+.next-desktop:hover {
+  cursor: pointer;
+}
+
+.next-desktop:active {
+  transform: translate(4px, 0);
+  transition: all 0.1s;
+}
+
+.back-desktop:hover {
+  cursor: pointer;
+}
+
+.back-desktop:active {
+  transform: translate(4px, 0);
+  transition: all 0.1s;
+}
+
+.prompt-box {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  width: 40%;
+  color: var(--red-color);
+  font-size: var(--normal-font-size);
+  text-align: center;
+}
+
+.prompt {
+  margin: 0;
+}

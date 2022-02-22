@@ -1,4 +1,4 @@
-@import "./common.css";
+@import "/styles/common.css";
 
 .logo {
   color: var(--text-color);
@@ -9,15 +9,10 @@
 .result-container {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
   background: white;
-  width: 85vw;
-  height: 75vh;
-  padding: 0.5rem 2rem 1rem 1rem;
-  position: relative;
-  margin: auto;
   display: flex;
 }
 
-.right {
+.picture {
   width: 40%;
   padding: 0;
   overflow: hidden;
@@ -25,14 +20,9 @@
 
 .img {
   width: 100%;
-  pointer-events: none;
 }
 
-.left {
-  width: 60%;
-  overflow: hidden;
-  margin: 0 auto;
-  padding: 1rem 2rem;
+.text-box {
   display: flex;
   flex-direction: column;
 }
@@ -50,9 +40,10 @@
   height: 5px;
   margin-top: 0;
   padding: 0;
+  border: 0;
 }
 
 .description {
   margin-top: 1rem;
-  font-size: var(--middle-font);
+  text-align: center;
 }
