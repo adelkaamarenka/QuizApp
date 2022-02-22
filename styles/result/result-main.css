@@ -1,4 +1,4 @@
-@import "/styles/common.css";
+@import "../common.css";
 
 .logo {
   color: var(--text-color);

@@ -1,4 +1,4 @@
-@import "/styles/common.css";
+@import "../common.css";
 
 .quiz-box {
   display: flex;
@@ -12,7 +12,7 @@
 
 .pizza {
   background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.3)),
-    URL("/images/pizza4.jpg") center/cover;
+    URL("../../images/pizza4.jpg") center/cover;
   background-size: 100%;
 }
 .quiz-name {
