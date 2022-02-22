@@ -3,6 +3,7 @@
 .lang {
   margin-top: var(--margin-top-mobile);
   margin-bottom: 0;
+  text-align: center;
 }
 
 .lang-box {
@@ -12,10 +13,10 @@
 }
 
 .lang-item {
-  width: 15vh;
-  height: 15vh;
-  margin-top: 2rem;
-  margin-bottom: 2rem;
+  width: 20vh;
+  height: 20vh;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
   border-radius: 50%;
   overflow: hidden;
   align-items: center;
