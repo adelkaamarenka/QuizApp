@@ -25,6 +25,7 @@
 .text-box {
   display: flex;
   flex-direction: column;
+  overflow: auto;
 }
 
 .title {
@@ -40,7 +41,6 @@
   height: 5px;
   margin-top: 0;
   padding: 0;
-  border: 0;
 }
 
 .description {
