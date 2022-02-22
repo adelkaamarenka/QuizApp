@@ -51,7 +51,7 @@ function init() {
   })
 
   promptField = document.querySelector(".prompt");
-  lang != null ? promptField.textContent = translateText("Choose an answer!", lang) : promptField.textContent = "Choose an answer!";
+  promptField.textContent = lang ? translateText("Choose an answer!", lang) : "Choose an answer!"
 
   counter = document.querySelector(".counter");
 
@@ -60,7 +60,6 @@ function init() {
   let n = Object.assign({}, answersCounter);
   answersStates.push(n);
 
-  //load the first question
   loadQuestion();
 
   //assign functionality to buttons
@@ -95,7 +94,7 @@ function nextQuestion() {
     //if last question - load the results
     else {
       calculateResult();
-      lang == null ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
+      lang ? window.location.replace("./result.html") : window.location.replace(`./result.html?lang=${lang}`);
     }
   }
 
@@ -153,9 +152,9 @@ function loadQuestion() {
 
   promptField.style.display = 'none';
 
-  lang != null ? question.textContent = translateText(quizContent[currQuestion].question, lang) : question.textContent = quizContent[currQuestion].question;
+  question.textContent = lang ? translateText(quizContent[currQuestion].question, lang) : quizContent[currQuestion].question;
   gameElements.forEach(element => {
-    lang != null ? gameState[element].textContent = translateText(quizContent[currQuestion][element], lang) : gameState[element].textContent = quizContent[currQuestion][element];
+    gameState[element].textContent = lang ? translateText(quizContent[currQuestion][element], lang) : quizContent[currQuestion][element];
   })
 }
 
