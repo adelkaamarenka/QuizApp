@@ -30,16 +30,7 @@ function translateText(content, lang) {
 }
 
 function appendLanguage(href, lang) {
-  switch (lang) {
-    case "de":
-      return href += "?lang=de";
-
-    case "pl":
-      return href += "?lang=pl";
-
-    default:
-      return href
-  }
+  return lang ? `${href}?lang=${lang}` : href;
 }
 
 function init() {
